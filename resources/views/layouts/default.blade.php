@@ -3,20 +3,38 @@
   <head>
     <title>@yield('title', 'Weibo App') - Laravel 新手入门教程</title>
     <link rel="stylesheet" href="/weibo/public/css/app.css">
+    <style>
+    	footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  font-size: 13px;
+  font-weight: bold;
+
+  a {
+    color: #555;
+  }
+
+  a:hover {
+    color: #222;
+  }
+
+  small {
+    float: left;
+  }
+  img.brand-icon {
+    width: 17px;
+    height: 17px;
+  }
+}
+    </style>
   </head>
-  <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="/">Weibo App</a>
-        <ul class="navbar-nav justify-content-end">
-          <li class="nav-item"><a class="nav-link" href="/help">帮助</a></li>
-          <li class="nav-item" ><a class="nav-link" href="#">登录</a></li>
-        </ul>
-      </div>
-    </nav>
+  	@include('layouts._header')
     
     <div class="container">
       @yield('content')
+      @include('layouts._footer')
     </div>
     
   </body>
